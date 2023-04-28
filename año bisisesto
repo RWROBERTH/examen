@@ -1,0 +1,50 @@
+Funcion conteo=Funcioncontar(bisiestos)
+	x=0
+	edad_media=0
+	edad_renacimiento=0
+	edad_moderna=0
+	Para j=1 Hasta 2023 Con Paso 1 Hacer
+		si j mod 4 = 0 Entonces
+			si j mod 100 = 0 Entonces
+				si j mod 400 = 0 Entonces
+					bisiestos[1,j] = j
+					x = x+1
+				SiNo
+					x = x
+				FinSi
+			SiNo
+				bisiestos[1,j] = j
+				x = x+1
+			FinSi
+		SiNo
+			x = x
+		FinSi
+		si bisiestos[1,j] > 0 y bisiestos[1,j] < 1501 Entonces
+			edad_media = edad_media + 1
+		FinSi
+		si bisiestos[1,j] > 1300 y bisiestos[1,j] < 1601 Entonces
+			edad_renacimiento = edad_renacimiento + 1
+		FinSi
+		si bisiestos[1,j] > 1491 y bisiestos[1,j] < 1790 Entonces
+			edad_moderna = edad_moderna + 1
+		FinSi
+	Fin Para
+	Escribir "Años bisiestos desde el año 1 hasta el 2023:"
+	Escribir "Hay ",x , " años bisiestos."
+	Escribir ""
+	Escribir "Oscurantismo o Edad Media (desde el año 1 hasta el siglo XV):"
+	Escribir "Hay ",edad_media , " años biestos. "
+	Escribir ""
+	Escribir "Edad del Renacimiento (desde el siglo XIV hasta XVI):"
+	Escribir "Hay ",edad_renacimiento , " años biesiestos."
+	Escribir ""
+	Escribir "Edad Moderna desde 1492 (descubrimiento de America)"
+	Escribir "hasta 1789 (Revolución Francesa):"
+	Escribir "Hay ",edad_moderna , " años biesiestos"
+
+FinFuncion
+Algoritmo examen_tres
+	Definir suma Como Entero
+	Dimension bisiestos[1,2023]
+	Escribir Funcioncontar(bisiestos)
+FinAlgoritmo
